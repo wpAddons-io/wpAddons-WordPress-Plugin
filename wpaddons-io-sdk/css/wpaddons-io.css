@@ -1,0 +1,136 @@
+/**
+ * General
+ */
+
+#wpaddons-io-wrap .addons-wrap {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+	align-content: flex-start;
+}
+#wpaddons-io-wrap .addon {
+	display: block;
+	border: 1px solid #ddd;
+	margin-bottom: 15px;
+	padding: 0;
+	background: #fff;
+	text-decoration: none;
+}
+#wpaddons-io-wrap .addon .addon-cover img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+#wpaddons-io-wrap .addon .addon-content {
+	padding: 15px 20px 30px;
+}
+#wpaddons-io-wrap .addon .addon-icon-end,
+#wpaddons-io-wrap .addon .addon-icon-start {
+	width: 128px;
+	height: 128px;
+}
+#wpaddons-io-wrap .addon .addon-icon-end {
+	float: right;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+#wpaddons-io-wrap .addon .addon-icon-start {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+#wpaddons-io-wrap .addon .addon-heading {
+	margin: 0 0 10px;
+}
+#wpaddons-io-wrap .addon .addon-heading a {
+	text-decoration: none;
+}
+#wpaddons-io-wrap .addon .addon-footer {
+	border-top: 1px solid #ddd;
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+	width: 100%;
+	background-color: #FFF;
+	padding: 15px 20px;
+}
+
+/**
+ * Layout
+ */
+
+/* one column on the dashboard */
+@media only screen and (max-width: 500px) {
+	#wpaddons-io-wrap .half .addon {
+		flex-basis: 100%;
+	}
+	#wpaddons-io-wrap .third .addon {
+		flex-basis: 100%;
+	}
+	#wpaddons-io-wrap .quarter .addon {
+		flex-basis: 100%;
+	}
+}
+
+/* two column on the dashboard */
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+	#wpaddons-io-wrap .half .addon {
+		flex-basis: calc( ( 100% / 2 ) - 15px );
+	}
+	#wpaddons-io-wrap .third .addon {
+		flex-basis: calc( ( 100% / 2 ) - 15px );
+	}
+	#wpaddons-io-wrap .quarter .addon {
+		flex-basis: calc( ( 100% / 2 ) - 15px );
+	}
+}
+
+/* three columns on the dashboard */
+@media only screen and (min-width: 800px) and (max-width: 1500px) {
+	#wpaddons-io-wrap .half .addon {
+		flex-basis: calc( ( 100% / 2 ) - 15px );
+	}
+	#wpaddons-io-wrap .third .addon {
+		flex-basis: calc( ( 100% / 3 ) - 15px );
+	}
+	#wpaddons-io-wrap .quarter .addon {
+		flex-basis: calc( ( 100% / 3 ) - 15px );
+	}
+}
+
+/* four columns on the dashboard */
+@media only screen and (min-width: 1500px) and (max-width: 1800px) {
+	#wpaddons-io-wrap .half .addon {
+		flex-basis: calc( ( 100% / 2 ) - 10px );
+	}
+	#wpaddons-io-wrap .third .addon {
+		flex-basis: calc( ( 100% / 3 ) - 15px );
+	}
+	#wpaddons-io-wrap .quarter .addon {
+		flex-basis: calc( ( 100% / 4 ) - 15px );
+	}
+}
+
+/**
+ * RTL
+ */
+
+.rtl #wpaddons-io-wrap .addon .addon-icon-end {
+	float: left;
+	margin-left: 0;
+	margin-right: 15px;
+}
+.rtl #wpaddons-io-wrap .addon .addon-icon-start {
+	float: right;
+	margin-right: 0;
+	margin-left: 15px;
+}
