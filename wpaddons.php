@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Addons
+ * Plugin Name: wpAddons
  * Plugin URI:  https://wpAddons.io/
  * Description: Display addons and extensions from wpAddons.io using a simple shortcode.
  * Version:     1.0
  * Author:      Rami Yushuvaev
  * Author URI:  https://GenerateWP.com/
- * Text Domain: text_domain
+ * Text Domain: wpaddons
  * Domain Path: /languages
  */
 
